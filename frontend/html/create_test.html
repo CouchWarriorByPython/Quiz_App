@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <form id="create-test-form">
+        <h2>Create Test</h2>
+        <label for="title">Test Title</label>
+        <input type="text" id="title" name="title" required>
+
+        <div id="questions-container">
+            <div class="question-item">
+                <label>Question</label>
+                <input type="text" name="question" required>
+
+                <label>Options</label>
+                <div class="options-container">
+                    <div class="option-item">
+                        <input type="text" name="option" required>
+                        <button type="button" class="add-option-btn">+</button>
+                    </div>
+                </div>
+
+                <label>Correct Answer</label>
+                <input type="text" name="correct_answer" required>
+            </div>
+        </div>
+
+        <button type="button" onclick="addQuestion()">Add Question</button>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
